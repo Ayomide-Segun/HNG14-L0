@@ -1,3 +1,5 @@
+const axios = require('axios');
+
 exports.classifyData = async(req, res) => {
     const {name} = req.query;
     try {
@@ -52,7 +54,7 @@ exports.classifyData = async(req, res) => {
 
         return res.status(500).json({
             status: "error",
-            message: "Internal server error"
+            message: error.message || "Internal server error"
         });
     }
     
