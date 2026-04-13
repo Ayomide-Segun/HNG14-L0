@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { classifyData } = require('../HNG14-L0/controllers/dataController')
+const { classifyData } = require('../controllers/dataController')
 
 router.get('/classify', classifyData);
 
